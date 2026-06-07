@@ -9,5 +9,5 @@ http://127.0.0.1:5500/wingslist.html
 
 OR
 
-
+bash > npm start
 http://localhost:3000/wingslist.html
