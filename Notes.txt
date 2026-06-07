@@ -1,0 +1,5 @@
+notes
+
+Go to project page 
+bask > npm start
+Click Live Server

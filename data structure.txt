@@ -1,0 +1,48 @@
+data structure
+
+Edit - create Edit button to open popup window with form fields for editing. 
+if update is succssful, hide form fields and print "Recipe successful Updated" message
+close window after 3 seconds
+
+Database name: wings-recipes
+Collection name: recipes-data
+
+{
+  "name": "Buffalo Hot Wings",
+  "descShort": "the Classic hot wings",
+  "category": "spicy",
+  "ingredients": [
+    "Franks Red Hot sauce",
+    "honey",
+    "ketchup"
+  ],
+  "cooking_method": "frying"
+},
+{
+  "name": "Mark San Teriyaki Wings",
+  "descShort": "the taste of Izakaya",
+  "category": "sweet",
+  "ingredients": [
+    "Kikkoman teriyaki sauce",
+    "honey",
+    "garlic",
+    "ginger",
+    "mirin",
+    "chili flakes"
+  ],
+  "cooking_method": "frying"
+},
+{
+  "name": "Wing King Bourbon Street",
+  "descShort": "the #1 Wings recipe winner",
+  "category": "savory",
+  "ingredients": [
+    "Jack Daniels bourbon",
+    "honey",
+    "garlic",
+    "cayenne hot sauce",
+    "minced onions",
+    "chili sauce"
+  ],
+  "cooking_method": "frying"
+},
