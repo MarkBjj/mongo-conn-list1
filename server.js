@@ -1,5 +1,4 @@
 // Load environment variables from .env file
-const { MongoClient } = require("mongodb");
 require("dotenv").config();
 
 const express = require("express");
