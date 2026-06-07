@@ -4,7 +4,7 @@ const addSaleForm = document.getElementById("add-sale-form");
 
 // Tip: If you change the port in server.js, update this constant
 // Using 127.0.0.1 instead of localhost avoids DNS resolution lag in some browsers
-const API_URL = "http://127.0.0.1:3000/sales";
+const API_URL = "http://127.0.0.1:3000/recipes";
 
 async function fetchSales() {
   try {
@@ -17,10 +17,10 @@ async function fetchSales() {
     const data = await response.json();
     salesList.innerHTML = data
       .map(
-        (sale) => `
+        (recipe) => `
             <li>
-              <strong>${sale.item}</strong> - $${sale.price || 0} (Qty: ${sale.quantity || 0}) - Total: <strong>$${(sale.totalSaleAmount || 0).toFixed(2)}</strong>
-              <button onclick="deleteSale('${sale._id}')" style="margin-left: 15px; background: #ff4444; color: white; border: none; border-radius: 4px; cursor: pointer; padding: 5px 10px;">Delete</button>
+              <strong>${recipe.name}</strong> (${recipe.category}) - ${recipe.descShort}
+              <button onclick="deleteSale('${recipe._id}')" style="margin-left: 15px; background: #ff4444; color: white; border: none; border-radius: 4px; cursor: pointer; padding: 5px 10px;">Delete</button>
             </li>
         `,
       )

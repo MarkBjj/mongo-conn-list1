@@ -1,5 +1,13 @@
 notes
 
 Go to project page 
-bask > npm start
+bash > npm start
 Click Live Server
+
+
+http://127.0.0.1:5500/wingslist.html
+
+OR
+
+
+http://localhost:3000/wingslist.html
