@@ -10,11 +10,11 @@ const app = express(); // Initialize the Express framework
 const PORT = 3000;
 
 app.use(cors()); // Allows your browser (Live Server) to talk to this backend.
-app.use(express.static(path.join(__dirname, "public"))); // Serves static files from the 'public' folder
+app.use(express.static(__dirname)); // Serves static files from this folder
 
 // Serve wingslist.html when accessing the root URL
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "wingslist.html"));
+  res.sendFile(path.join(__dirname, "wingslist.html"));
 });
 app.use(express.json()); // Allows the server to read JSON data sent in the body of a POST request.
 
