@@ -2,6 +2,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const path = require("path");
 const Recipe = require("./db");
 const cors = require("cors");
 
@@ -9,7 +10,12 @@ const app = express(); // Initialize the Express framework
 const PORT = 3000;
 
 app.use(cors()); // Allows your browser (Live Server) to talk to this backend.
-app.use(express.static(__dirname)); // Serves index.html and script.js directly from this folder
+app.use(express.static(path.join(__dirname, "public"))); // Serves static files from the 'public' folder
+
+// Serve wingslist.html when accessing the root URL
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "wingslist.html"));
+});
 app.use(express.json()); // Allows the server to read JSON data sent in the body of a POST request.
 
 // GET Route: Fetches all recipes from the database
